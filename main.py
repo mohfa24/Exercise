@@ -17,13 +17,14 @@ class TextStyle:
 class WeekOneExercise:
 
     def welcome(self):
-        print(f"Welcome to Week one exercise , choose one of these programs:")
-        print(f"{TextStyle.GREEN}1. Abbreviation of paragraph.{TextStyle.RESET}")
-        print(f"{TextStyle.GREEN}2. Rock Paper Scissor.{TextStyle.RESET}")
-        print(f"{TextStyle.GREEN}3. BMI calculation.{TextStyle.RESET}")
+        print(f"{TextStyle.MAGENTA}Welcome to Week one exercise , choose one of these programs:{TextStyle.RESET}")
+
 
         while True:
-            menuSelection = input("Input menu number (1 , 2 , 3):")
+            print(f"{TextStyle.GREEN}1. Abbreviation of paragraph.{TextStyle.RESET}")
+            print(f"{TextStyle.GREEN}2. Rock Paper Scissor.{TextStyle.RESET}")
+            print(f"{TextStyle.GREEN}3. BMI calculation.{TextStyle.RESET}")
+            menuSelection = input(f"{TextStyle.MAGENTA}Input menu number (1 , 2 , 3):{TextStyle.RESET}")
             try:
                 menuSelection = int(menuSelection)
                 if menuSelection == 1:
@@ -54,9 +55,10 @@ class WeekOneExercise:
         # print(f"random number : {randNum} and the char is : {list[randNum]}")
         pcGame = ''
         while True:
-            print(f"You Choose {myGame} and PC choose {list[randNum]}")
+
 
             if myGame in list:
+                print(f"{TextStyle.YELLOW}You Choose {myGame} and PC choose {list[randNum]}{TextStyle.RESET}")
                 pcGame = list[randNum]
                 if myGame == pcGame:
                     print(f"{TextStyle.WHITE}The game is draw !!{TextStyle.RESET}")
@@ -90,7 +92,7 @@ class WeekOneExercise:
         while True:
             try:
                 bmi = (weight / (height / 100) ** 2)
-                print(f"Your bmi is {bmi}")
+                print(f"{TextStyle.BLUE}Your bmi is {bmi}{TextStyle.RESET}")
                 if bmi <= 18.4:
                     print(f"{TextStyle.YELLOW}You are underweight.{TextStyle.RESET}")
                     break
