@@ -16,9 +16,8 @@ class TextStyle:
 
 class WeekOneExercise:
 
-    def welcome(self):
+    def __init__(self):
         print(f"{TextStyle.MAGENTA}Welcome to Week one exercise , choose one of these programs:{TextStyle.RESET}")
-
 
         while True:
             print(f"{TextStyle.GREEN}1. Abbreviation of paragraph.{TextStyle.RESET}")
@@ -55,7 +54,6 @@ class WeekOneExercise:
         # print(f"random number : {randNum} and the char is : {list[randNum]}")
         pcGame = ''
         while True:
-
 
             if myGame in list:
                 print(f"{TextStyle.YELLOW}You Choose {myGame} and PC choose {list[randNum]}{TextStyle.RESET}")
@@ -114,7 +112,7 @@ class WeekOneExercise:
 
 
 week1 = WeekOneExercise()
-week1.welcome()
+
 
 #
 # print(f"Welcome to Week one exercise , choose one of these programs:")
